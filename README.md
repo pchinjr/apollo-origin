@@ -1,2 +1,0 @@
-# apollo-origin
-Begin app
