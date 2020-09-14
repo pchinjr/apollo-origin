@@ -14,7 +14,12 @@ let resolvers = {
 }
 
 let server = new ApolloServer({typeDefs, resolvers})
-let handler = server.createHandler()
+let handler = server.createHandler({
+ cors: {
+   origin: '*'
+   credentials: false
+ }
+})
 
 exports.handler = function(event, context, callback) {
   let body = arc.http.helpers.bodyParser(event)
