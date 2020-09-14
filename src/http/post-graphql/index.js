@@ -16,8 +16,8 @@ let resolvers = {
 let server = new ApolloServer({typeDefs, resolvers})
 let handler = server.createHandler({
  cors: {
-   origin: '*',
-   credentials: false,
+   origin: true,
+   credentials: true,
  }
 })
 
